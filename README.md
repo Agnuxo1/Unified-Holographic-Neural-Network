@@ -84,6 +84,8 @@ Francisco Angulo de Lafuente
 
 Project Link: [https://github.com/username/enhanced-holographic-neural-network](https://github.com/username/enhanced-holographic-neural-network)
 
+DEMO: https://b_ic1rgwmt8fv.v0.build/
+
 ## Acknowledgments
 
 - NVIDIA for their cutting-edge AI technologies and APIs
