@@ -80,7 +80,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-Francisco Angulo de Lafuente - [francisco.angulo@example.com](mailto:francisco.angulo@example.com)
+Francisco Angulo de Lafuente 
 
 Project Link: [https://github.com/username/enhanced-holographic-neural-network](https://github.com/username/enhanced-holographic-neural-network)
 
