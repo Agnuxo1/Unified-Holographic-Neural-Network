@@ -78,6 +78,8 @@ The integration of these technologies enables the EUHNN to perform optical neura
 
 DEMO: https://b_ic1rgwmt8fv.v0.build/
 
+      https://b_1eghmy2q0il.v0.build/
+
 
 
 ![Captura de pantalla -2024-10-19 09-48-48](https://github.com/user-attachments/assets/cf523774-6ade-41c2-b789-57da5dc8407a)
