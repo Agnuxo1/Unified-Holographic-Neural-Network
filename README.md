@@ -64,6 +64,8 @@ The Enhanced Unified Holographic Neural Network is an advanced AI system that co
 
 7. **3D Visualization**: Observe the real-time 3D representation of the neural network, including neurons, connections, and context nodes.
 
+DEMO: https://b_ic1rgwmt8fv.v0.build/
+
 ## Contributing
 
 Contributions to the Enhanced Unified Holographic Neural Network project are welcome. Please follow these steps to contribute:
@@ -84,7 +86,6 @@ Francisco Angulo de Lafuente
 
 Project Link: [https://github.com/username/enhanced-holographic-neural-network](https://github.com/username/enhanced-holographic-neural-network)
 
-DEMO: https://b_ic1rgwmt8fv.v0.build/
 
 ## Acknowledgments
 
