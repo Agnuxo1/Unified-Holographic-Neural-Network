@@ -78,6 +78,16 @@ The integration of these technologies enables the EUHNN to perform optical neura
 
 DEMO: https://b_ic1rgwmt8fv.v0.build/
 
+
+
+![Captura de pantalla -2024-10-19 09-48-48](https://github.com/user-attachments/assets/cf523774-6ade-41c2-b789-57da5dc8407a)
+
+
+
+![Captura de pantalla -2024-10-19 09-51-04](https://github.com/user-attachments/assets/d9deb562-0013-4b9e-86a8-48d7f2b8ccb2)
+
+
+
 ## Contributing
 
 Contributions to the Enhanced Unified Holographic Neural Network project are welcome. Please follow these steps to contribute:
