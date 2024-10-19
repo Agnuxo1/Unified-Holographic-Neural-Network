@@ -17,13 +17,13 @@ The Enhanced Unified Holographic Neural Network is an advanced AI system that co
 
 ## Ray Tracing and CUDA Acceleration
 
-# The EUHNN utilizes NVIDIA's Ray Tracing and CUDA technologies to simulate the optical neural network efficiently. Key aspects of the implementation include:
+The EUHNN utilizes NVIDIA's Ray Tracing and CUDA technologies to simulate the optical neural network efficiently. Key aspects of the implementation include:
 
-# Ray Tracing: A Monte Carlo path tracing algorithm simulates the propagation of light through the holographic memory and neural network elements. The optical elements are modeled as a combination of refractive and diffractive surfaces. Lenses are simulated using thin lens approximations, while diffraction gratings are modeled using phase functions that alter the direction of incident rays based on their wavelength.
+Ray Tracing: A Monte Carlo path tracing algorithm simulates the propagation of light through the holographic memory and neural network elements. The optical elements are modeled as a combination of refractive and diffractive surfaces. Lenses are simulated using thin lens approximations, while diffraction gratings are modeled using phase functions that alter the direction of incident rays based on their wavelength.
 
-# CUDA: CUDA kernels are implemented to accelerate complex optical operations such as convolutions and Fourier transforms. This allows for highly parallel computations on the GPU, significantly improving performance. Custom CUDA kernels are also used to simulate wave propagation effects and interference patterns critical for holographic computations.
+CUDA: CUDA kernels are implemented to accelerate complex optical operations such as convolutions and Fourier transforms. This allows for highly parallel computations on the GPU, significantly improving performance. Custom CUDA kernels are also used to simulate wave propagation effects and interference patterns critical for holographic computations.
 
-# RTX Hardware: The project takes advantage of RTX hardware features like RT Cores for accelerated ray-triangle intersection tests, Tensor Cores for matrix operations in neural network layers, and specialized hardware for denoising the Monte Carlo rendered results. This combination of features allows for real-time simulation of complex optical phenomena within the neural network architecture.
+RTX Hardware: The project takes advantage of RTX hardware features like RT Cores for accelerated ray-triangle intersection tests, Tensor Cores for matrix operations in neural network layers, and specialized hardware for denoising the Monte Carlo rendered results. This combination of features allows for real-time simulation of complex optical phenomena within the neural network architecture.
 The integration of these technologies enables the EUHNN to perform optical neural computations at speeds comparable to traditional electronic neural networks while maintaining the advantages of optical processing, such as reduced power consumption and increased parallelism.
 
 
