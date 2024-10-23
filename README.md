@@ -140,7 +140,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 Francisco Angulo de Lafuente 
 
-Project Link: [https://github.com/username/enhanced-holographic-neural-network](https://github.com/username/enhanced-holographic-neural-network)
+Project Link: [https://youtu.be/29xr5okUZ54?si=XIW2rNyYxMpRWXx-](https://youtu.be/29xr5okUZ54?si=XIW2rNyYxMpRWXx-)
 
 
 ## Acknowledgments
