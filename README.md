@@ -90,6 +90,38 @@ DEMO-2: https://b_1eghmy2q0il.v0.build/
 
 
 
+## Deploy the project and test the prototype here: 
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/sb1-56sqdy) 
+
+
+
+https://github.com/user-attachments/assets/4f878d32-00fd-429c-99d3-59c66f356497
+
+
+
+![Captura de pantalla -2024-10-23 12-39-49](https://github.com/user-attachments/assets/98ee359c-2e58-419d-b13e-7d2fe4708b7a)
+
+
+
+![Captura de pantalla -2024-10-23 12-40-20](https://github.com/user-attachments/assets/97b2e360-729d-465d-9bd7-92cc360ba089)
+
+
+
+![Captura de pantalla -2024-10-23 12-41-22](https://github.com/user-attachments/assets/cec785b0-f91c-4ef0-90a5-f8e8911dcbf7)
+
+
+
+![Captura de pantalla -2024-10-23 12-41-52](https://github.com/user-attachments/assets/3cf5b849-2f27-42fa-98b6-58a5192ce288)
+
+
+
+![Captura de pantalla -2024-10-23 12-42-26](https://github.com/user-attachments/assets/9ba85b4a-e39e-4e05-9fba-565952174885)
+
+
+
+
+
 ## Contributing
 
 Contributions to the Enhanced Unified Holographic Neural Network project are welcome. Please follow these steps to contribute:
