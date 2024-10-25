@@ -1,4 +1,5 @@
 # Enhanced Unified Holographic Neural Network
+Francisco Angulo de Lafuente
 
 ## Project Overview
 
