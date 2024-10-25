@@ -120,6 +120,81 @@ https://github.com/user-attachments/assets/4f878d32-00fd-429c-99d3-59c66f356497
 
 
 
+DEMO 2D: https://v0.dev/chat/zxua26lZsnT?b=Nb1RXgPNUa8
+
+
+![Captura de pantalla -2024-10-25 19-42-48](https://github.com/user-attachments/assets/9b604abc-415b-4ccb-9059-35ddb8c82caa)
+
+
+![Captura de pantalla -2024-10-25 19-43-13](https://github.com/user-attachments/assets/7bba99c8-4d59-4bbd-a184-e19204e35c0c)
+
+
+
+DEMO 3D: https://stackblitz.com/edit/sb1-evxclo?embed=1&file=package.json
+
+
+![Captura de pantalla -2024-10-25 19-44-15](https://github.com/user-attachments/assets/ff0294e3-c780-477a-924c-5c0d81079d4d)
+
+![Captura de pantalla -2024-10-25 19-44-39](https://github.com/user-attachments/assets/3bf92582-1f5d-4675-baba-a7cd007dc52d)
+
+![Captura de pantalla -2024-10-25 19-45-07](https://github.com/user-attachments/assets/695ae30e-f1a1-47ae-913d-fcb328628e30)
+
+![Captura de pantalla -2024-10-25 19-45-33](https://github.com/user-attachments/assets/879a986c-6bd9-46d3-bfd0-3df69a59b789)
+
+
+
+
+
+## Results and Discussion
+
+The Holographic Quantum RAG Nebula presents a visually compelling and interactive way to represent and explore knowledge extracted from text. The simulation of quantum effects enhances the retrieval process and provides a novel way to conceptualize relationships between words and concepts.
+
+Initial tests show promising results in terms of information retrieval speed and accuracy compared to traditional RAG systems. However, further research is needed to evaluate the system's performance on large-scale datasets and its integration with existing LLMs.
+
+## Conclusion and Future Work
+
+The Holographic Quantum RAG Nebula offers a promising direction for developing more efficient and intuitive long-term memory systems for LLMs. Future work will focus on:
+
+1. Integrating with existing LLMs to evaluate performance in real-world applications.
+2. Scaling the system to handle larger datasets efficiently.
+3. Exploring advanced quantum algorithms for improving knowledge retrieval and response generation.
+4. Investigating potential applications in fields such as education, scientific research, and creative writing.
+
+## References
+
+1. Gabor, D. (1948). A New Microscopic Principle. Nature, 161(4098), 777-778.
+
+2. van Heerden, P. J. (1963). Theory of Optical Information Storage in Solids. Applied Optics, 2(4), 393-400.
+
+3. Pribram, K. H. (1969). The Neurophysiology of Remembering. Scientific American, 220(1), 73-86.
+
+4. Deutsch, D. (1985). Quantum Theory, the Church-Turing Principle and the Universal Quantum Computer. Proceedings of the Royal Society of London. A. Mathematical and Physical Sciences, 400(1818), 97-117.
+
+5. Shor, P. W. (1994). Algorithms for Quantum Computation: Discrete Logarithms and Factoring. Proceedings 35th Annual Symposium on Foundations of Computer Science, 124-134.
+
+6. Grover, L. K. (1996). A Fast Quantum Mechanical Algorithm for Database Search. Proceedings of the Twenty-Eighth Annual ACM Symposium on Theory of Computing, 212-219.
+
+7. Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is All You Need. Advances in Neural Information Processing Systems, 30.
+
+8. Devlin, J., Chang, M. W., Lee, K., & Toutanova, K. (2018). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. arXiv preprint arXiv:1810.04805.
+
+9. Brown, T. B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., ... & Amodei, D. (2020). Language Models are Few-Shot Learners. arXiv preprint arXiv:2005.14165.
+
+10. Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., ... & Kiela, D. (2020). Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks. Advances in Neural Information Processing Systems, 33, 9459-9472.
+
+11. Gao, L., Biderman, S., Black, S., Golding, L., Hoppe, T., Foster, C., ... & Leahy, C. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling. arXiv preprint arXiv:2101.00027.
+
+12. Beltagy, I., Peters, M. E., & Cohan, A. (2020). Longformer: The Long-Document Transformer. arXiv preprint arXiv:2004.05150.
+
+13. Zaheer, M., Guruganesh, G., Dubey, K. A., Ainslie, J., Alberti, C., Ontanon, S., ... & Ahmed, A. (2020). Big Bird: Transformers for Longer Sequences. Advances in Neural Information Processing Systems, 33, 17283-17297.
+
+14. Borgeaud, S., Mensch, A., Hoffmann, J., Cai, T., Rutherford, E., Millican, K., ... & Sifre, L. (2022). Improving Language Models by Retrieving from Trillions of Tokens. arXiv preprint arXiv:2112.04426.
+
+15. Izacard, G., Grave, E., Joulin, A., & Usunier, N. (2022). Few-shot Learning with Retrieval Augmented Language Models. arXiv preprint arXiv:2208.03299.
+
+
+
+
 
 
 ## Contributing
