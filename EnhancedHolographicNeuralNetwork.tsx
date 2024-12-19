@@ -22,7 +22,7 @@ import localforage from 'localforage'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`
 
-// NVIDIA API placeholders
+// NVIDIA API 
 const LLAMA_INDEX_API = "YOUR-LLAMA-INDEX-API-KEY-HERE"
 const NEMOTRON_70B_API = "YOUR-NEMOTRON-70B-API-KEY-HERE"
 const RAG_NVIDIA_API = "YOUR-RAG-NVIDIA-API-KEY-HERE"
