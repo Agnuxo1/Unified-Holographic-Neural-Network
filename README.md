@@ -1,6 +1,17 @@
 # Enhanced Unified Holographic Neural Network
 Francisco Angulo de Lafuente
 
+## Winner Nvidia and LlamaIndex Developers 2024
+
+![Captura de pantalla 2024-12-22 121110](https://github.com/user-attachments/assets/368fc18c-13da-451a-a478-00007729987e)
+
+![Captura de pantalla 2024-12-24 094151](https://github.com/user-attachments/assets/d5e31766-d2b2-4e7a-afaa-53e0f6a4ea9b)
+
+![Captura de pantalla 2024-12-24 103827](https://github.com/user-attachments/assets/4b4f7fa4-1d92-46e4-a2ad-bb7a797d6a26)
+
+![Captura de pantalla 2024-12-24 104031](https://github.com/user-attachments/assets/60241789-ae5e-40c0-bf7e-60ddbe897a60)
+
+
 ## Project Overview
 
 The Enhanced Unified Holographic Neural Network is an advanced AI system that combines holographic memory, neural networks, and optical computing principles. This project, developed by Francisco Angulo de Lafuente, aims to create a more efficient and powerful AI model capable of learning, storing, and retrieving information in a manner inspired by the human brain and holographic principles.
