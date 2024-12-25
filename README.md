@@ -3,38 +3,8 @@ Francisco Angulo de Lafuente
 
 # Remember to enter your APIS for complete operation
 
-/
-├── src/
-│   ├── components/
-│   │   ├── Chat.tsx
-│   │   ├── FileProcessing.tsx
-│   │   ├── HolographicNeuralNetwork/
-│   │   │   ├── Connection.tsx
-│   │   │   ├── HolographicPlane.tsx
-│   │   │   ├── Neuron.tsx
-│   │   │   └── Scene.tsx
-│   │   ├── KnowledgeManagement.tsx
-│   │   ├── Learning.tsx
-│   │   ├── P2PNetwork.tsx
-│   │   └── Training.tsx
-│   ├── hooks/
-│   │   └── useEnhancedHolographicNeuralNetwork.ts
-│   ├── lib/
-│   │   ├── EnhancedHolographicNeuralNetwork.ts
-│   │   └── HolographicMemory.ts
-│   ├── nvidia/
-│   │   ├── llamaIndex.ts
-│   │   ├── nemotron70B.ts
-│   │   ├── nemoGuardrails.ts
-│   │   └── ragNvidia.ts
-│   ├── utils/
-│   │   ├── opticalSimulation.ts
-│   │   └── shaders.ts
-│   ├── config.ts
-│   └── types.ts
-├── app/
-│   └── page.tsx
-└── next.config.js
+![Captura de pantalla 2024-12-25 113615](https://github.com/user-attachments/assets/7ace6ad6-0eb9-4421-8518-85eeb5ff891b)
+
 
 ## Winner Nvidia and LlamaIndex Developers 2024
 
