@@ -93,6 +93,8 @@ The integration of these technologies enables the EUHNN to perform optical neura
 
 7. **3D Visualization**: Observe the real-time 3D representation of the neural network, including neurons, connections, and context nodes.
 
+DEMO: https://v0.dev/chat/kyvoEEtAEU2
+
 DEMO-1: https://b_ic1rgwmt8fv.v0.build/
 
 DEMO-2: https://b_1eghmy2q0il.v0.build/
