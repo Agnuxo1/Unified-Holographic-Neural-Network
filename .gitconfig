@@ -1,0 +1,7 @@
+[user]
+    name = Agnuxo1
+    email = lareliquia.angulo@gmail.com
+[credential]
+    helper = store
+[core]
+    autocrlf = input
