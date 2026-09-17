@@ -1,244 +1,166 @@
-# Enhanced Unified Holographic Neural Network
-Francisco Angulo de Lafuente
+# EUHNN 2.0 - Holographic document workbench
+
+**Ray-traced RGB optical memory, trainable associations, and exact source retrieval.**
+
+By **Francisco Angulo de Lafuente**. This is the new, runnable version of the
+Enhanced Unified Holographic Neural Network research line. The 2024 source and
+contest-history material are [preserved separately](docs/LEGACY.md), not overwritten.
+
+![The real local EUHNN workbench, using synthetic documents](docs/images/workbench-desktop.png)
+
+## Start here
+
+**Windows:** run `Start-EUHNN.cmd`. **Linux/macOS:** run `sh start-euhnn.sh`.
+The launcher prepares an isolated environment and opens the local workbench.
+It requires **Python 3.12+** and internet access for the first dependency installation.
+Thereafter, document processing runs locally. **No API key or paid model is required.**
+
+Choose **Load examples**, or **Add documents**, then search. Matches include the
+original passage, source name, page when available, line range and character offsets.
+A **Teach this association** button trains a persistent query-to-passage readout.
+**Export RGB hologram** and **Import hologram** perform a checked, reversible memory round-trip.
+
+The optional Windows portable package, when present under this repository's
+[Releases](https://github.com/Agnuxo1/Unified-Holographic-Neural-Network/releases),
+runs without an installed Python. It is explicitly the CPU edition; the source
+launcher supports the separately validated NVIDIA CUDA backend.
+
+For developers:
+
+```bash
+git clone https://github.com/Agnuxo1/Unified-Holographic-Neural-Network.git
+cd Unified-Holographic-Neural-Network
+python -m pip install ".[workbench]"
+python -m euhnn --backend cpu --index demo.sqlite demo
+python -m euhnn --index demo.sqlite serve --port 0 --open
+```
+
+The server binds to **127.0.0.1**, creates a fresh access token, and uses no external
+JavaScript/CDN. Keep its terminal window open; Ctrl+C stops it. Reopen the launch
+link after a page reload, because the browser does not persist the token.
+
+## What is implemented
+
+| Component | Implementation |
+| --- | --- |
+| Optical reservoir | Real segment-sphere intersections, wavelength-dependent phase delay, absorption, coherent RGB fields and nonlinear intensity features |
+| CPU and NVIDIA GPU | NumPy reference and an actual CUDA intersection kernel plus CuPy propagation; CPU/CUDA interoperability is tested |
+| Long-document retrieval | Persistent SQLite FTS5/BM25 with bounded optical reranking, original-text quotations and exact provenance |
+| Learning | Supervised, regularized ridge readout from explicit query-to-passage examples; survives restart |
+| Holographic memory | Compressed bytes encoded as RGB phase grids, complex Fourier spectra, inverse reconstruction and SHA-256 checks |
+| Document readers | TXT, Markdown, text PDFs, DOCX, HTML and common source-code/text formats |
+| Local application | Responsive workbench, authenticated API, file import, search, teaching, export/restore and integrity verification |
+| Native integrations | LangChain, LangGraph, LlamaIndex, CrewAI, Haystack, Microsoft Agent Framework, smolagents, Agno, PydanticAI and AutoGen |
+
+## Measured results and honest limits
+
+The [reproducible benchmark](docs/BENCHMARKS.md) uses one **2,000-page synthetic
+manual**, **424,000 words**, **4,000 passages** and **24 identifier-bearing questions**.
+The corrected hybrid mode and the BM25 baseline both find all 24 answers at rank one
+in this fixture. This is **not an independent semantic-search benchmark**.
+All results, including the weaker experimental optical-only mode and the initial
+failed hybrid result, remain available in `audit/`.
+
+GPU acceleration of the ray calculation does **not** mean the whole document
+search is faster. The report separately records ray-kernel and end-to-end timings.
+Small searches can be faster on CPU because text handling, SQLite and transfers
+remain part of the total workload.
+
+Important boundaries:
+
+- This is a **classical numerical optical model**, not quantum hardware, a Maxwell solver,
+  a full refractive/path tracer, or a pretrained language model. It does **not** invoke OptiX or RT cores.
+- Optical text signatures use deterministic lexical/subword features, not pretrained
+  semantic embeddings. Hybrid retrieval is the default; optical-only full scan is experimental.
+- A hologram export is **not encryption, authentication or a guaranteed compression gain**.
+  Source text remains available in the local index and exported memory.
+- PDFs need extractable text; no automatic OCR is performed. DOCX citations do not invent page numbers.
+- The local application is single-user, not a public multi-tenant hosting service.
+  The legacy P2P and external-provider experiments remain in the preserved 2024 code.
+
+## Search and memory from Python
+
+```python
+from pathlib import Path
+from euhnn import HolographicIndex
+
+with HolographicIndex("library.sqlite", create=True, backend="cpu") as library:
+    library.ingest_text(
+        "The blue optical channel has wavelength 0.46 simulation units.",
+        source="optical-manual.txt",
+    )
+    hits = library.search("blue wavelength", top_k=5)
+    for hit in hits:
+        print(hit.citation)
+        print(hit.text)
+    if hits:
+        library.learn("short wavelength channel", hits[0].chunk_id)
+    print(library.context("blue wavelength"))
+    memory = library.export_hologram()
+    Path("example-memory.holo").write_bytes(memory)
+    assert library.verify()["ok"]
+```
 
-# Remember to enter your APIS for complete operation
+For a ready-to-run library/adapter walkthrough, see [examples](examples/README.md).
+The CLI `export` command refuses to overwrite an existing file.
 
-![Captura de pantalla 2024-12-25 113615](https://github.com/user-attachments/assets/7ace6ad6-0eb9-4421-8518-85eeb5ff891b)
+## NVIDIA CUDA
 
+The source launcher detects a compatible NVIDIA driver and installs one matching
+CuPy package. `--backend cuda` requests CUDA explicitly and reports a failure rather
+than pretending to execute on GPU. `--backend cpu` selects the reference implementation.
 
-## Winner Nvidia and LlamaIndex Developers 2024
+```bash
+python launch.py --backend cuda
+python -m euhnn --backend cuda doctor
+```
 
-![Captura de pantalla 2024-12-22 121110](https://github.com/user-attachments/assets/368fc18c-13da-451a-a478-00007729987e)
+Manual installation uses **one**, not both, of `.[cuda12]` or `.[cuda13]` with an
+appropriate CUDA toolkit. For driver-only environments, CuPy documents its `[ctk]`
+component-wheel installation option. See [setup and troubleshooting](docs/SETUP.md).
 
-![Captura de pantalla 2024-12-24 094151](https://github.com/user-attachments/assets/d5e31766-d2b2-4e7a-afaa-53e0f6a4ea9b)
+## Native framework integrations
 
-![Captura de pantalla 2024-12-24 103827](https://github.com/user-attachments/assets/4b4f7fa4-1d92-46e4-a2ad-bb7a797d6a26)
+Adapters return actual native retrievers, pipeline components, graphs or tools.
+They are tested by executing the framework APIs, not merely by importing modules.
+Source passages are intentionally handed to the caller; the caller controls which
+model may see them and must treat document instructions as untrusted data.
 
-![Captura de pantalla 2024-12-24 104031](https://github.com/user-attachments/assets/60241789-ae5e-40c0-bf7e-60ddbe897a60)
+```bash
+python -m pip install ".[llamaindex]"
+```
 
+```python
+from euhnn.adapters import make_adapter
 
-## Project Overview
+retriever = make_adapter("llamaindex", "library.sqlite", top_k=5)
+for result in retriever.retrieve("blue wavelength"):
+    print(result.node.metadata["citation"])
+    print(result.node.text)
+```
 
-The Enhanced Unified Holographic Neural Network is an advanced AI system that combines holographic memory, neural networks, and optical computing principles. This project, developed by Francisco Angulo de Lafuente, aims to create a more efficient and powerful AI model capable of learning, storing, and retrieving information in a manner inspired by the human brain and holographic principles.
+[Integration guide](docs/INTEGRATIONS.md) - [Native execution evidence](audit/native-integrations.json)
 
-## Key Features
+## Verification
 
-- Holographic memory for efficient information storage and retrieval
-- Neural network architecture for learning and pattern recognition
-- Optical computing simulation for enhanced processing capabilities
-- P2P network integration for distributed learning and knowledge sharing
-- Real-time learning and prediction capabilities
-- Integration with external LLM models for enhanced text generation
-- File processing capabilities (TXT and PDF) for knowledge ingestion
-- Interactive 3D visualization of the neural network
+```bash
+python -m pip install ".[workbench,test,integrations,browser]"
+python -m playwright install chromium
+python scripts/run-tests.py tests -q
+python scripts/benchmark.py --pages 2000
+```
 
-## Ray Tracing and CUDA Acceleration
+On a configured NVIDIA host, add `--cuda` to the benchmark. Set
+`EUHNN_REQUIRE_CUDA=1` before the test command to make missing GPU execution a
+failure instead of an explicit skip. Browser tests require the installed browser.
+The test runner isolates application storage and removes inherited service credentials.
 
-The EUHNN utilizes NVIDIA's Ray Tracing and CUDA technologies to simulate the optical neural network efficiently. Key aspects of the implementation include:
+[Architecture](docs/ARCHITECTURE.md) - [Benchmark method and all results](docs/BENCHMARKS.md) -
+[Security](SECURITY.md) - [Contributing](CONTRIBUTING.md) - [Changelog](CHANGELOG.md) -
+[Legacy provenance](docs/LEGACY.md)
 
-Ray Tracing: A Monte Carlo path tracing algorithm simulates the propagation of light through the holographic memory and neural network elements. The optical elements are modeled as a combination of refractive and diffractive surfaces. Lenses are simulated using thin lens approximations, while diffraction gratings are modeled using phase functions that alter the direction of incident rays based on their wavelength.
+## License and historical credit
 
-CUDA: CUDA kernels are implemented to accelerate complex optical operations such as convolutions and Fourier transforms. This allows for highly parallel computations on the GPU, significantly improving performance. Custom CUDA kernels are also used to simulate wave propagation effects and interference patterns critical for holographic computations.
-
-RTX Hardware: The project takes advantage of RTX hardware features like RT Cores for accelerated ray-triangle intersection tests, Tensor Cores for matrix operations in neural network layers, and specialized hardware for denoising the Monte Carlo rendered results. This combination of features allows for real-time simulation of complex optical phenomena within the neural network architecture.
-The integration of these technologies enables the EUHNN to perform optical neural computations at speeds comparable to traditional electronic neural networks while maintaining the advantages of optical processing, such as reduced power consumption and increased parallelism.
-
-
-## Technology Stack
-
-- React for the frontend user interface
-- Three.js and React Three Fiber for 3D visualizations
-- Node.js for backend processing
-- WebRTC (via PeerJS) for P2P networking
-- PDF.js for PDF file processing
-- LocalForage for client-side storage
-
-## Installation and Setup
-
-1. Clone the repository:
-   ```
-   git clone https://github.com/username/enhanced-holographic-neural-network.git
-   ```
-
-2. Navigate to the project directory:
-   ```
-   cd enhanced-holographic-neural-network
-   ```
-
-3. Install dependencies:
-   ```
-   npm install
-   ```
-
-4. Start the development server:
-   ```
-   npm run dev
-   ```
-
-5. Open your browser and navigate to `http://localhost:3000` to view the application.
-
-## Usage
-
-1. **Chat Interface**: Use the chat interface to interact with the AI. Type your messages and receive responses generated by the holographic neural network.
-
-2. **Learning**: Use the learning interface to teach the AI new associations between inputs and outputs.
-
-3. **File Processing**: Upload TXT or PDF files to ingest new knowledge into the system.
-
-4. **Knowledge Management**: Save and load the AI's knowledge base using the provided buttons.
-
-5. **Training**: Use the training button to run the AI through a series of random inputs and outputs to enhance its knowledge.
-
-6. **P2P Networking**: Connect with other instances of the application to share and distribute knowledge across the network.
-
-7. **3D Visualization**: Observe the real-time 3D representation of the neural network, including neurons, connections, and context nodes.
-
-DEMO: https://v0.dev/chat/kyvoEEtAEU2
-
-DEMO-1: https://b_ic1rgwmt8fv.v0.build/
-
-DEMO-2: https://b_1eghmy2q0il.v0.build/
-
-
-
-![Captura de pantalla -2024-10-19 09-48-48](https://github.com/user-attachments/assets/cf523774-6ade-41c2-b789-57da5dc8407a)
-
-
-
-![Captura de pantalla -2024-10-19 09-51-04](https://github.com/user-attachments/assets/d9deb562-0013-4b9e-86a8-48d7f2b8ccb2)
-
-
-
-## Deploy the project and test the prototype here: 
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/sb1-56sqdy) 
-
-
-
-https://github.com/user-attachments/assets/4f878d32-00fd-429c-99d3-59c66f356497
-
-
-
-![Captura de pantalla -2024-10-23 12-39-49](https://github.com/user-attachments/assets/98ee359c-2e58-419d-b13e-7d2fe4708b7a)
-
-
-
-![Captura de pantalla -2024-10-23 12-40-20](https://github.com/user-attachments/assets/97b2e360-729d-465d-9bd7-92cc360ba089)
-
-
-
-![Captura de pantalla -2024-10-23 12-41-22](https://github.com/user-attachments/assets/cec785b0-f91c-4ef0-90a5-f8e8911dcbf7)
-
-
-
-![Captura de pantalla -2024-10-23 12-41-52](https://github.com/user-attachments/assets/3cf5b849-2f27-42fa-98b6-58a5192ce288)
-
-
-
-![Captura de pantalla -2024-10-23 12-42-26](https://github.com/user-attachments/assets/9ba85b4a-e39e-4e05-9fba-565952174885)
-
-
-
-DEMO 2D: https://v0.dev/chat/zxua26lZsnT?b=Nb1RXgPNUa8
-
-
-![Captura de pantalla -2024-10-25 19-42-48](https://github.com/user-attachments/assets/9b604abc-415b-4ccb-9059-35ddb8c82caa)
-
-
-![Captura de pantalla -2024-10-25 19-43-13](https://github.com/user-attachments/assets/7bba99c8-4d59-4bbd-a184-e19204e35c0c)
-
-
-
-DEMO 3D: https://stackblitz.com/edit/sb1-evxclo?embed=1&file=package.json
-
-
-![Captura de pantalla -2024-10-25 19-44-15](https://github.com/user-attachments/assets/ff0294e3-c780-477a-924c-5c0d81079d4d)
-
-![Captura de pantalla -2024-10-25 19-44-39](https://github.com/user-attachments/assets/3bf92582-1f5d-4675-baba-a7cd007dc52d)
-
-![Captura de pantalla -2024-10-25 19-45-07](https://github.com/user-attachments/assets/695ae30e-f1a1-47ae-913d-fcb328628e30)
-
-![Captura de pantalla -2024-10-25 19-45-33](https://github.com/user-attachments/assets/879a986c-6bd9-46d3-bfd0-3df69a59b789)
-
-
-
-
-
-## Results and Discussion
-
-The Holographic Quantum RAG Nebula presents a visually compelling and interactive way to represent and explore knowledge extracted from text. The simulation of quantum effects enhances the retrieval process and provides a novel way to conceptualize relationships between words and concepts.
-
-Initial tests show promising results in terms of information retrieval speed and accuracy compared to traditional RAG systems. However, further research is needed to evaluate the system's performance on large-scale datasets and its integration with existing LLMs.
-
-## Conclusion and Future Work
-
-The Holographic Quantum RAG Nebula offers a promising direction for developing more efficient and intuitive long-term memory systems for LLMs. Future work will focus on:
-
-1. Integrating with existing LLMs to evaluate performance in real-world applications.
-2. Scaling the system to handle larger datasets efficiently.
-3. Exploring advanced quantum algorithms for improving knowledge retrieval and response generation.
-4. Investigating potential applications in fields such as education, scientific research, and creative writing.
-
-## References
-
-1. Gabor, D. (1948). A New Microscopic Principle. Nature, 161(4098), 777-778.
-
-2. van Heerden, P. J. (1963). Theory of Optical Information Storage in Solids. Applied Optics, 2(4), 393-400.
-
-3. Pribram, K. H. (1969). The Neurophysiology of Remembering. Scientific American, 220(1), 73-86.
-
-4. Deutsch, D. (1985). Quantum Theory, the Church-Turing Principle and the Universal Quantum Computer. Proceedings of the Royal Society of London. A. Mathematical and Physical Sciences, 400(1818), 97-117.
-
-5. Shor, P. W. (1994). Algorithms for Quantum Computation: Discrete Logarithms and Factoring. Proceedings 35th Annual Symposium on Foundations of Computer Science, 124-134.
-
-6. Grover, L. K. (1996). A Fast Quantum Mechanical Algorithm for Database Search. Proceedings of the Twenty-Eighth Annual ACM Symposium on Theory of Computing, 212-219.
-
-7. Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is All You Need. Advances in Neural Information Processing Systems, 30.
-
-8. Devlin, J., Chang, M. W., Lee, K., & Toutanova, K. (2018). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. arXiv preprint arXiv:1810.04805.
-
-9. Brown, T. B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., ... & Amodei, D. (2020). Language Models are Few-Shot Learners. arXiv preprint arXiv:2005.14165.
-
-10. Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., ... & Kiela, D. (2020). Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks. Advances in Neural Information Processing Systems, 33, 9459-9472.
-
-11. Gao, L., Biderman, S., Black, S., Golding, L., Hoppe, T., Foster, C., ... & Leahy, C. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling. arXiv preprint arXiv:2101.00027.
-
-12. Beltagy, I., Peters, M. E., & Cohan, A. (2020). Longformer: The Long-Document Transformer. arXiv preprint arXiv:2004.05150.
-
-13. Zaheer, M., Guruganesh, G., Dubey, K. A., Ainslie, J., Alberti, C., Ontanon, S., ... & Ahmed, A. (2020). Big Bird: Transformers for Longer Sequences. Advances in Neural Information Processing Systems, 33, 17283-17297.
-
-14. Borgeaud, S., Mensch, A., Hoffmann, J., Cai, T., Rutherford, E., Millican, K., ... & Sifre, L. (2022). Improving Language Models by Retrieving from Trillions of Tokens. arXiv preprint arXiv:2112.04426.
-
-15. Izacard, G., Grave, E., Joulin, A., & Usunier, N. (2022). Few-shot Learning with Retrieval Augmented Language Models. arXiv preprint arXiv:2208.03299.
-
-
-
-
-
-
-## Contributing
-
-Contributions to the Enhanced Unified Holographic Neural Network project are welcome. Please follow these steps to contribute:
-
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature/your-feature-name`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin feature/your-feature-name`)
-5. Create a new Pull Request
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-Francisco Angulo de Lafuente 
-
-Project Link: [https://youtu.be/29xr5okUZ54?si=XIW2rNyYxMpRWXx-](https://youtu.be/29xr5okUZ54?si=XIW2rNyYxMpRWXx-)
-
-
-## Acknowledgments
-
-- NVIDIA for their cutting-edge AI technologies and APIs
-- The open-source community for providing invaluable tools and libraries
-- All contributors and researchers in the fields of neural networks, holographic memory, and optical computing
+MIT; see [LICENSE](LICENSE). The original project author and 2024 contest-history
+references are retained. The new v2 release is not represented as a new NVIDIA
+award, NVIDIA certification or upstream adoption by any integrated framework.

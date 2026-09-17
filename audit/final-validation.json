@@ -1,0 +1,51 @@
+{
+  "version": "2.0.0",
+  "date": "2026-09-17",
+  "source_branch": "release/euhnn-v2-2026-09-17",
+  "legacy_source_commit": "ca2cf440280f5994dfcc1f0729f0721f0c897c47",
+  "tests": {
+    "core": 162,
+    "native_integrations": 10,
+    "cuda_rtx3090": 4,
+    "chromium_end_to_end": 1,
+    "total_passed": 177
+  },
+  "static_analysis": {
+    "ruff": "passed",
+    "git_diff_check": "passed",
+    "compileall": "passed",
+    "dependency_compatibility": "passed"
+  },
+  "packaging": {
+    "build": "passed",
+    "clean_wheel_install_and_demo": "passed",
+    "launcher_clean_environment_self_test": "passed",
+    "artifacts": [
+      {
+        "file": "euhnn-2.0.0-py3-none-any.whl",
+        "bytes": 60333,
+        "sha256": "f459710ec8b934de65dee1366029c4df86e91a5ae08e3f443c15b4d02d971a1b"
+      },
+      {
+        "file": "euhnn-2.0.0.tar.gz",
+        "bytes": 420547,
+        "sha256": "b5f10e0bd86e1f9d15c98ae156618cda1f20e5804a8966377a836fbe9e9973c0"
+      }
+    ]
+  },
+  "benchmark": "audit/benchmark.json",
+  "browser_evidence": "audit/browser-validation.json",
+  "native_integration_evidence": "audit/native-integrations.json",
+  "legacy_archive": {
+    "file": "versions\\legacy-2024\\source-ca2cf44.tar.gz",
+    "bytes": 3783559,
+    "sha256": "8eb568fcc1621627651cf004de09348f46b1b2528df164938340a5f9bba74dff"
+  },
+  "claims": {
+    "rt_cores_used": false,
+    "remote_model_calls_in_validation": 0,
+    "upstream_framework_adoption_claimed": false,
+    "new_nvidia_award_claimed": false
+  },
+  "test_environment_hygiene": "passed; isolated framework tests preserve Windows SystemDrive and leave no literal %SystemDrive% checkout directory"
+}

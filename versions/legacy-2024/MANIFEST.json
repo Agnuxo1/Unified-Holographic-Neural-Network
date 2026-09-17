@@ -1,0 +1,294 @@
+{
+  "version": "legacy-2024",
+  "source_commit": "ca2cf440280f5994dfcc1f0729f0721f0c897c47",
+  "archive": "source-ca2cf44.tar.gz",
+  "sha256": "8eb568fcc1621627651cf004de09348f46b1b2528df164938340a5f9bba74dff",
+  "verified_blob_files": 45,
+  "gitlinks": [
+    {
+      "path": "python_version",
+      "mode": "160000",
+      "type": "commit",
+      "git_object": "de144aef4ecd8d8b0a3d5ebe42439d28c082fe2c"
+    }
+  ],
+  "verification": "Every regular archived file compared byte-for-byte to its original Git blob. A Gitlink records a commit reference, not nested source. No private repository content was copied.",
+  "entries": [
+    {
+      "path": ".gitconfig",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "9fc7746eab442d58ce16b652c501def9110d6098"
+    },
+    {
+      "path": ".github/FUNDING.yml",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "568f95a2f45ea51383b80888a68eab17970eec60"
+    },
+    {
+      "path": "CV_Francisco_Angulo_de_Lafuente_v0.docx",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "929a535f71389933b58c5fe185ac45349ca62532"
+    },
+    {
+      "path": "CV_Francisco_Angulo_de_Lafuente_v0.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "6f9ac94cec751f40b3be6e0a8bec8ae446a06b31"
+    },
+    {
+      "path": "EnhancedHolographicNeuralNetwork/app/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "475c5bd3e1d467dcee5a180fbde60ecfbfe57696"
+    },
+    {
+      "path": "EnhancedHolographicNeuralNetwork/components/Chat.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "fa3513dbef98a870a47786e9b9f9d654b907b82a"
+    },
+    {
+      "path": "EnhancedHolographicNeuralNetwork/components/EnhancedUnifiedHolographicNeuralNetwork.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "095f105a89f6522301b63747a8d6286ad342511f"
+    },
+    {
+      "path": "EnhancedHolographicNeuralNetwork/components/FileProcessing.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "2943275211ab812a22ceb034e31ed816c827ac62"
+    },
+    {
+      "path": "EnhancedHolographicNeuralNetwork/components/HolographicNeuralNetwork/Connection.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "05d6c867f9a7a6ec1085d3838c52acb63c68366d"
+    },
+    {
+      "path": "EnhancedHolographicNeuralNetwork/components/HolographicNeuralNetwork/HolographicPlane.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "93c521bac951b50655ebb0f842d6cead5c0147ca"
+    },
+    {
+      "path": "EnhancedHolographicNeuralNetwork/components/HolographicNeuralNetwork/Neuron.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "040574b5372003a07f0534b42bc582d25c6fa30d"
+    },
+    {
+      "path": "EnhancedHolographicNeuralNetwork/components/HolographicNeuralNetwork/Scene.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "bf19d529db8e1ce71d17368ca4949fac2d943092"
+    },
+    {
+      "path": "EnhancedHolographicNeuralNetwork/components/KnowledgeManagement.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "090b72f91f3c828f3a5ab760798b0ed0244e12e6"
+    },
+    {
+      "path": "EnhancedHolographicNeuralNetwork/components/Learning.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "ef841731380a297ddfe6958b30e07c4fa6d5fa89"
+    },
+    {
+      "path": "EnhancedHolographicNeuralNetwork/components/P2PNetwork.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "edd2f0f847b210495cbfd5cdde35a9e3e091e7cf"
+    },
+    {
+      "path": "EnhancedHolographicNeuralNetwork/components/Training.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "dc02a586303fd93b200de6ac359f8590a18c0577"
+    },
+    {
+      "path": "EnhancedHolographicNeuralNetwork/lib/EnhancedHolographicNeuralNetwork.ts",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "7d59551d15b4f2e55de6a708f9f8dac0463d3752"
+    },
+    {
+      "path": "EnhancedHolographicNeuralNetwork/lib/HolographicMemory.ts",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "9f894571c1d551784c6e03d37ca40e3ebeea7989"
+    },
+    {
+      "path": "EnhancedHolographicNeuralNetwork/next.config.js",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "1c47d5c0a3c88eca15e4ac7e82ecef241f828d5b"
+    },
+    {
+      "path": "EnhancedHolographicNeuralNetwork/pages/api/nvidia-completion.ts",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "fc91d666cef29e01740b23b209a5290bdf45252f"
+    },
+    {
+      "path": "EnhancedHolographicNeuralNetwork/src/config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "63bee44e98ce191cd079ed7eb65b415e56e7ec98"
+    },
+    {
+      "path": "EnhancedHolographicNeuralNetwork/src/nvidia/nemo/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "a98899257110775ff5f06a76e7527530e8f55946"
+    },
+    {
+      "path": "EnhancedHolographicNeuralNetwork/src/nvidia/nemo/nemo_example.py",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "5c64ae52b82065947ef32af0812a95072c6fb82f"
+    },
+    {
+      "path": "EnhancedHolographicNeuralNetwork/src/nvidia/rag/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "badb4567ff7c03de98a9b6301fcad73ca2530838"
+    },
+    {
+      "path": "EnhancedHolographicNeuralNetwork/src/nvidia/rag/rag_example.py",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "0bc1377e8a8c90fa56a338f1117f094cf7fe0611"
+    },
+    {
+      "path": "EnhancedHolographicNeuralNetwork/src/utils/nvidiaApi.ts",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "9de5afd549462c7754d4e15021703689c59885b5"
+    },
+    {
+      "path": "JavaScript_DEMO/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "b512c09d476623ff4bf8d0d63c29b784925dbdf8"
+    },
+    {
+      "path": "JavaScript_DEMO/Basic_Python_implementation_example.py",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "e65f8d007b0a578726318cb01b797b0e2b402f9a"
+    },
+    {
+      "path": "JavaScript_DEMO/DEMO.zip",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "9e5d84ab1de179052803556b774ff7d59117cdd2"
+    },
+    {
+      "path": "JavaScript_DEMO/Enhanced Unified Holographic Neural Network_ A Novel Approach to AI and Optical Computing.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "2b319bbc094df0b3da4730f88c25e2931b35ddb3"
+    },
+    {
+      "path": "JavaScript_DEMO/EnhancedHolographicNeuralNetwork (1).tsx",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "9b954af621d945fccbc4fa4c39a775bf8d420cf5"
+    },
+    {
+      "path": "JavaScript_DEMO/EnhancedHolographicNeuralNetwork (2).tsx",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "232c90493bb4cab9f4ce38b0a2f27ee5d9b2c0bd"
+    },
+    {
+      "path": "JavaScript_DEMO/EnhancedHolographicNeuralNetwork.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "392284e3d86480cd1621a36761fc116005c2ebf2"
+    },
+    {
+      "path": "JavaScript_DEMO/HOLOGRAPHIC_MEMORY_IMPROVEMENTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "6171121048aa91062bd9497e9be30b1cc18df8ec"
+    },
+    {
+      "path": "JavaScript_DEMO/Holographic_quantum_RAG_Nebula.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "c682fcf556e3d72feddae10a5a4b03d94cda2682"
+    },
+    {
+      "path": "JavaScript_DEMO/LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "2ec27e64c764e392f2742bdcf40c8223a28c7c5c"
+    },
+    {
+      "path": "JavaScript_DEMO/OPTICAL_IMPROVEMENTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "84f976933af7c2180d0bc6a1bbdaa5bb60707c7f"
+    },
+    {
+      "path": "JavaScript_DEMO/PAPER.md",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "c0bce7efdb9da86489ed195138e3c94b1f4f1293"
+    },
+    {
+      "path": "JavaScript_DEMO/Quantum-Holographic-Neural-Networks-A-Novel-Approach-to-Natural-Language-Processing.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "481379c12e75ee357741e418fce0a7c73d04c55c"
+    },
+    {
+      "path": "JavaScript_DEMO/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "36a2e4723391332b35588a9265cbb284e36124cc"
+    },
+    {
+      "path": "JavaScript_DEMO/collection of all source codes.zip",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "23bd61fd347e545e35c19574f23f917f437206e4"
+    },
+    {
+      "path": "JavaScript_DEMO/sb1-56sqdy.zip",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "9dbc8b793d3819b8319f413de7266814ac495464"
+    },
+    {
+      "path": "Python_DEMO/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "0cfd2175f98f1446a24f0ba08b7acdff0c436b4c"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "36a2e4723391332b35588a9265cbb284e36124cc"
+    },
+    {
+      "path": "python_version",
+      "mode": "160000",
+      "type": "commit",
+      "git_object": "de144aef4ecd8d8b0a3d5ebe42439d28c082fe2c"
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "git_object": "f9491516b3503987ed115696933a529eea1253db"
+    }
+  ]
+}

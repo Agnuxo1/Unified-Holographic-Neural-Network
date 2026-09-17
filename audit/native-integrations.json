@@ -1,0 +1,109 @@
+{
+  "version": "2.0.0",
+  "synthetic_data_only": true,
+  "native_framework_execution": true,
+  "remote_model_calls": 0,
+  "upstream_adoption_claimed": false,
+  "frameworks": [
+    {
+      "framework": "langchain",
+      "package": "langchain-core",
+      "version": "1.6.3",
+      "native_class": "euhnn.adapters.langchain.EUHNNRetriever",
+      "retrieval_executed": true,
+      "exact_source_and_citation_verified": true,
+      "nonmatch_returns_empty": true,
+      "native_state_or_pipeline_serialization_checked": false
+    },
+    {
+      "framework": "langgraph",
+      "package": "langgraph",
+      "version": "1.2.11",
+      "native_class": "langgraph.graph.state.CompiledStateGraph",
+      "retrieval_executed": true,
+      "exact_source_and_citation_verified": true,
+      "nonmatch_returns_empty": true,
+      "native_state_or_pipeline_serialization_checked": true
+    },
+    {
+      "framework": "llamaindex",
+      "package": "llama-index-core",
+      "version": "0.14.24",
+      "native_class": "euhnn.adapters.llamaindex.EUHNNRetriever",
+      "retrieval_executed": true,
+      "exact_source_and_citation_verified": true,
+      "nonmatch_returns_empty": true,
+      "native_state_or_pipeline_serialization_checked": false
+    },
+    {
+      "framework": "crewai",
+      "package": "crewai",
+      "version": "1.15.22",
+      "native_class": "crewai.tools.base_tool.Tool",
+      "retrieval_executed": true,
+      "exact_source_and_citation_verified": true,
+      "nonmatch_returns_empty": true,
+      "native_state_or_pipeline_serialization_checked": false
+    },
+    {
+      "framework": "haystack",
+      "package": "haystack-ai",
+      "version": "3.1.1",
+      "native_class": "euhnn.adapters.haystack.EUHNNRetriever",
+      "retrieval_executed": true,
+      "exact_source_and_citation_verified": true,
+      "nonmatch_returns_empty": true,
+      "native_state_or_pipeline_serialization_checked": true
+    },
+    {
+      "framework": "agent_framework",
+      "package": "agent-framework-core",
+      "version": "1.18.0",
+      "native_class": "agent_framework._tools.FunctionTool",
+      "retrieval_executed": true,
+      "exact_source_and_citation_verified": true,
+      "nonmatch_returns_empty": true,
+      "native_state_or_pipeline_serialization_checked": false
+    },
+    {
+      "framework": "smolagents",
+      "package": "smolagents",
+      "version": "1.26.0",
+      "native_class": "euhnn.adapters.smolagents.EUHNNSearch",
+      "retrieval_executed": true,
+      "exact_source_and_citation_verified": true,
+      "nonmatch_returns_empty": true,
+      "native_state_or_pipeline_serialization_checked": false
+    },
+    {
+      "framework": "agno",
+      "package": "agno",
+      "version": "3.0.10",
+      "native_class": "agno.tools.function.Function",
+      "retrieval_executed": true,
+      "exact_source_and_citation_verified": true,
+      "nonmatch_returns_empty": true,
+      "native_state_or_pipeline_serialization_checked": false
+    },
+    {
+      "framework": "pydantic_ai",
+      "package": "pydantic-ai-slim",
+      "version": "2.44.0",
+      "native_class": "pydantic_ai.tools.Tool",
+      "retrieval_executed": true,
+      "exact_source_and_citation_verified": true,
+      "nonmatch_returns_empty": true,
+      "native_state_or_pipeline_serialization_checked": true
+    },
+    {
+      "framework": "autogen",
+      "package": "autogen-core",
+      "version": "0.7.5",
+      "native_class": "autogen_core.tools._function_tool.FunctionTool",
+      "retrieval_executed": true,
+      "exact_source_and_citation_verified": true,
+      "nonmatch_returns_empty": true,
+      "native_state_or_pipeline_serialization_checked": false
+    }
+  ]
+}
