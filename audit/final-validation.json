@@ -1,7 +1,7 @@
 {
   "version": "2.0.0",
   "date": "2026-09-17",
-  "source_branch": "release/euhnn-v2-2026-09-17",
+  "source_branch": "main",
   "legacy_source_commit": "ca2cf440280f5994dfcc1f0729f0721f0c897c47",
   "tests": {
     "core": 162,
@@ -28,8 +28,8 @@
       },
       {
         "file": "euhnn-2.0.0.tar.gz",
-        "bytes": 420547,
-        "sha256": "b5f10e0bd86e1f9d15c98ae156618cda1f20e5804a8966377a836fbe9e9973c0"
+        "bytes": 420719,
+        "sha256": "d89520aa02daba7411a655b06d788a56bce2608b8bc245fa5ff2eadd083d70a7"
       }
     ]
   },
@@ -47,5 +47,6 @@
     "upstream_framework_adoption_claimed": false,
     "new_nvidia_award_claimed": false
   },
-  "test_environment_hygiene": "passed; isolated framework tests preserve Windows SystemDrive and leave no literal %SystemDrive% checkout directory"
+  "test_environment_hygiene": "passed; isolated framework tests preserve Windows SystemDrive and leave no literal %SystemDrive% checkout directory",
+  "validated_code_commit": "2fd2be03f84e5541522f2f15617fbc3193679b95"
 }
