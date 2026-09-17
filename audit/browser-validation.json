@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "browser": "Chromium",
+  "synthetic_data_only": true,
+  "checks": [
+    "authenticated connection and actual bundled-corpus retrieval",
+    "file upload, persistent index and exact quoted source/citation",
+    "supervised association learned and retrieved through UI",
+    "actual RGB spectrum, export, removal, exact restore and integrity verification",
+    "nonmatch, full optical mode and phrase-filtered hybrid search",
+    "desktop and mobile layout with no horizontal overflow"
+  ],
+  "javascript_errors": [],
+  "external_requests": [],
+  "browser_version": "153.0.8010.12",
+  "ok": true
+}

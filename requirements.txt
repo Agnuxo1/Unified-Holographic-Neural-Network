@@ -1,17 +1,3 @@
-nvidia-nemo>=1.20.0
-torch>=2.0.0
-torchaudio>=2.0.0
-numpy>=1.20.0
-scipy>=1.7.0
-matplotlib>=3.3.0
-pandas>=1.3.0
-transformers>=4.30.0
-pdfjs-dist
-peerjs
-localforage
-uuid
-axios
-three
-# @react-three/fiber
-# @react-three/drei
-# @react-three/postprocessing
+# EUHNN 2.0 local workbench and document readers.
+# Historical requirements remain in versions/legacy-2024/source-ca2cf44.tar.gz.
+.[workbench]

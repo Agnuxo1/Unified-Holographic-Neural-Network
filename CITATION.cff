@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite this software when using its implementation or published benchmark fixtures."
+type: software
+title: "EUHNN 2.0: Ray-traced RGB optical memory and source-grounded document retrieval"
+version: 2.0.0
+date-released: 2026-09-17
+authors:
+  - family-names: "Angulo de Lafuente"
+    given-names: "Francisco"
+repository-code: "https://github.com/Agnuxo1/Unified-Holographic-Neural-Network"
+license: MIT

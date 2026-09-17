@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling==1.32.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "euhnn"
+version = "2.0.0"
+description = "Local source-grounded retrieval with a ray-traced RGB optical reservoir and reversible holographic memory"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+authors = [{name = "Francisco Angulo de Lafuente"}]
+dependencies = ["numpy>=2.0,<3"]
+keywords = ["holographic-memory", "ray-tracing", "document-search", "rag", "optical-reservoir"]
+
+[project.scripts]
+euhnn = "euhnn.cli:main"
+
+[project.optional-dependencies]
+documents = ["pypdf==6.19.0", "python-docx==1.2.0"]
+workbench = ["fastapi==0.141.1", "uvicorn==0.53.0", "pypdf==6.19.0", "python-docx==1.2.0"]
+cuda13 = ["cupy-cuda13x==14.2.0"]
+cuda12 = ["cupy-cuda12x==14.2.0"]
+test = ["pytest==9.1.1", "httpx==0.28.1", "httpx2==2.13.0", "build==1.6.1", "hatchling==1.32.0", "ruff==0.13.1"]
+browser = ["playwright==1.63.0"]
+langchain = ["langchain-core==1.6.3"]
+langgraph = ["langgraph==1.2.11", "langchain-core==1.6.3"]
+llamaindex = ["llama-index-core==0.14.24"]
+crewai = ["crewai==1.15.22"]
+haystack = ["haystack-ai==3.1.1"]
+agent-framework = ["agent-framework-core==1.18.0"]
+smolagents = ["smolagents==1.26.0"]
+agno = ["agno==3.0.10"]
+pydantic-ai = ["pydantic-ai-slim==2.44.0"]
+autogen = ["autogen-core==0.7.5"]
+integrations = ["langchain-core==1.6.3", "langgraph==1.2.11", "llama-index-core==0.14.24", "crewai==1.15.22", "haystack-ai==3.1.1", "agent-framework-core==1.18.0", "smolagents==1.26.0", "agno==3.0.10", "pydantic-ai-slim==2.44.0", "autogen-core==0.7.5"]
+
+[project.urls]
+Repository = "https://github.com/Agnuxo1/Unified-Holographic-Neural-Network"
+Issues = "https://github.com/Agnuxo1/Unified-Holographic-Neural-Network/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/euhnn"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/", "tests/", "scripts/", "docs/", "examples/", "pyproject.toml", "README.md", "LICENSE", "CHANGELOG.md", "launch.py", "Start-EUHNN.cmd", "start-euhnn.sh"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = ["cuda: requires explicit NVIDIA CUDA runtime", "integrations: requires all ten native framework SDKs", "browser: requires a Playwright browser"]
+
+[tool.ruff]
+line-length = 120
