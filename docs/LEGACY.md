@@ -9,8 +9,11 @@ implementing v2. Its regular files were compared byte-for-byte against their Git
 
 The old JavaScript/TypeScript and Python demo folders remain in the repository.
 The legacy `python_version` Gitlink records another commit reference, not embedded
-source. The archive does not invent missing submodule contents. No private sibling
-repository or private award file was copied into this public release.
+source. It had no matching `.gitmodules` entry, so v2 removes that dangling Gitlink
+from the active tree because it breaks clean GitHub Actions checkouts. Its original
+mode and object SHA remain recorded in the legacy manifest/archive. The archive does
+not invent missing submodule contents. No private sibling repository was copied into
+this public release.
 
 The historical README contains broad experimental descriptions, placeholder setup
 URLs and claims not established by the v2 tests. It is preserved as historical
