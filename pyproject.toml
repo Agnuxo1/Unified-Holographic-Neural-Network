@@ -21,7 +21,7 @@ documents = ["pypdf==6.19.0", "python-docx==1.2.0"]
 workbench = ["fastapi==0.141.1", "uvicorn==0.53.0", "pypdf==6.19.0", "python-docx==1.2.0"]
 cuda13 = ["cupy-cuda13x==14.2.0"]
 cuda12 = ["cupy-cuda12x==14.2.0"]
-test = ["pytest==9.1.1", "httpx==0.28.1", "httpx2==2.13.0", "build==1.6.1", "hatchling==1.32.0", "ruff==0.13.1"]
+test = ["pytest==9.1.1", "httpx==0.28.1", "httpx2==2.13.0", "build==1.6.1", "hatchling==1.32.0", "twine==7.0.0", "ruff==0.13.1"]
 browser = ["playwright==1.63.0"]
 langchain = ["langchain-core==1.6.3"]
 langgraph = ["langgraph==1.2.11", "langchain-core==1.6.3"]
@@ -52,3 +52,4 @@ markers = ["cuda: requires explicit NVIDIA CUDA runtime", "integrations: require
 
 [tool.ruff]
 line-length = 120
+
