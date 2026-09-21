@@ -2,12 +2,17 @@
 
 from pathlib import Path
 import os
+import site
 import subprocess
 import sys
 import tempfile
 
 root = Path(__file__).resolve().parents[1]
 (root / ".local-state").mkdir(exist_ok=True)
+user_site = Path(site.getusersitepackages())
+pythonpath = [str(root / "src")]
+if user_site.exists():
+    pythonpath.append(str(user_site))
 with tempfile.TemporaryDirectory(prefix="test-home-", dir=root / ".local-state") as home:
     roaming = Path(home) / "AppData" / "Roaming"
     local = Path(home) / "AppData" / "Local"
@@ -29,6 +34,11 @@ with tempfile.TemporaryDirectory(prefix="test-home-", dir=root / ".local-state")
     env = {key: os.environ[key] for key in names if key in os.environ}
     env.update(
         {
+            # Keep source-checkout tests independent of whether pip used the
+            # global or user site-packages directory before HOME was isolated.
+            "PYTHONPATH": os.pathsep.join(
+                filter(None, [*pythonpath, os.environ.get("PYTHONPATH")])
+            ),
             "HOME": home,
             "USERPROFILE": home,
             "TEMP": home,
@@ -54,3 +64,4 @@ with tempfile.TemporaryDirectory(prefix="test-home-", dir=root / ".local-state")
     )
     result = subprocess.run([sys.executable, "-m", "pytest", *(sys.argv[1:] or ["tests", "-q"])], cwd=root, env=env)
 raise SystemExit(result.returncode)
+
