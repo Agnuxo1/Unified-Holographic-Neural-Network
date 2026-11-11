@@ -8,6 +8,10 @@ contest-history material are [preserved separately](docs/LEGACY.md), not overwri
 
 ![The real local EUHNN workbench, using synthetic documents](docs/images/workbench-desktop.png)
 
+<!-- impact-note:start -->
+<sub><strong>Efficiency and practical value.</strong> EUHNN processes documents locally after setup, avoiding a mandatory paid model or API service for each query. Exact source passages and persistent query-to-passage associations make evidence checking and repeated document exploration easier. The <a href="#what-is-implemented">implemented workbench</a> combines bounded retrieval with reversible hologram storage, offering a reusable local workflow whose CPU and CUDA trade-offs are documented separately from overall retrieval quality.</sub>
+<!-- impact-note:end -->
+
 ## Start here
 
 **Windows:** run `Start-EUHNN.cmd`. **Linux/macOS:** run `sh start-euhnn.sh`.
